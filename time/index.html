@@ -1,0 +1,51 @@
+<!doctype html>
+<!-- https://www.sitepoint.com/a-basic-html5-template/ -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Adder of Time - A simple but correct time adder</title>
+  <meta name="description" content="A simple but correct time adder">
+  <meta name="author" content="iTNTPiston">
+
+  <meta property="og:title" content="Adder of Time">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://itntpiston.github.io/apps/time">
+  <meta property="og:description" content="A simple but correct time adder">
+  <meta property="og:image" content="../common/pistonApp.ico">
+
+  <link rel="icon" href="../common/pistonApp.ico">
+  <link rel="apple-touch-icon" href="../common/pistonApp.ico">
+
+</head>
+
+<body>
+  
+  <label for="help">Reference</label>
+  <p>d - days, h - hours, m - minutes, s - seconds, (no unit) - milliseconds</p>
+
+  <input type="radio" id="radio_unit_1000" name="radio_unit" value="1000" checked onchange="AdderOfTime.handler();">
+<label for="radio_unit_1000">No Alignment</label><br/>
+<input type="radio" id="radio_unit_30" name="radio_unit" value="30" onchange="AdderOfTime.handler();">
+<label for="radio_unit_30">30 FPS</label><br/>
+<input type="radio" id="radio_unit_60" name="radio_unit" value="60" onchange="AdderOfTime.handler();">
+<label for="radio_unit_60">60 FPS</label><br/>
+  <label for="input">Input:</label>
+  <br/>
+  <textarea id="input" rows="5" cols="50" placeholder="1m20s + 5m30s - 1m39s " oninput="AdderOfTime.handler();"></textarea>
+  <br/>
+  <label for="output">Output:</label>
+  <br/>
+  <textarea id="output" rows="5" cols="50" placeholder="(Output will be shown as you type in input)" readonly></textarea>
+  <br/>
+  <label for="error">Errors:</label>
+  <br/>
+  <textarea id="error" rows="5" cols="50" placeholder="(No Error :)" readonly></textarea>
+  <br/>
+  <p>
+    Source on <a href="https://github.com/iTNTPiston/apps">GitHub</a>. Report bugs there too
+  </p>
+  <script src="calc.js"></script>
+</body>
+</html>
